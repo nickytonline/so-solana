@@ -92,10 +92,6 @@ body {
   place-items: center;
 }
 
-a {
-  color: lime;
-}
-
 /* Animations are off by default for those that prefer reduced motion
    https://www.tatianamac.com/posts/prefers-reduced-motion/
  */

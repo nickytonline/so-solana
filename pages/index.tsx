@@ -124,7 +124,7 @@ const Home: NextPage = () => {
         <p>
           Please enter a{' '}
           <Link href="https://giphy.com/search/yolo" passHref>
-            <a target="blank" rel="noopener">
+            <a sx={{ color: '#00ff00' }} target="blank" rel="noopener">
               giphy.com
             </a>
           </Link>{' '}
