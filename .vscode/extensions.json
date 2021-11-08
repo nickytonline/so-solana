@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "rust-lang.rust",
     "matklad.rust-analyzer",
     "waderyan.nodejs-extension-pack",
     "esbenp.prettier-vscode",
