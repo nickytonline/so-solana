@@ -10,22 +10,32 @@ else
 fi
 
 # Install things for node/frontend land
-if command -v brew &> /dev/null
+if test -f "$NVM_DIR/nvm.sh"
 then
+  source $NVM_DIR/nvm.sh
   nvm install $(cat .nvmrc)
   nvm alias default $(cat .nvmrc)
-  npm install -g vercel
-
-  if ! command -v yarn &> /dev/null
-  then
-    npm install -g yarn
-  fi
-
-  yarn install
+else
+  echo "Assuming node is installed since nvm isn't"
 fi
 
+npm install -g vercel
+
+if ! command -v yarn &> /dev/null
+then
+  npm install -g yarn
+fi
+
+yarn install
+
 # Rust install
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+if command -v rustup &> /dev/null
+then
+  rustup update
+else
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+fi
+
 rustc --version
 rustup --version
 cargo --version
