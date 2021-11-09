@@ -42,11 +42,11 @@ issues with those environments.
 
 If you are interested in contributing to the project, first read our
 [contributing guidelines](./CONTRIBUTING.md). Take a look at our
-[existing issues](https://github.com/nickytonline/unofficial-edge-and-node-starter/issues),
-or if you come across an issue,
-[create an issue](https://github.com/nickytonline/unofficial-edge-and-node-starter/issues/new/choose).
+[existing issues](https://github.com/nickytonline/so-solana/issues), or if you
+come across an issue,
+[create an issue](https://github.com/nickytonline/so-solana/issues/new/choose).
 For feature requests,
-[start a discussion](https://github.com/nickytonline/unofficial-edge-and-node-starter/discussions)
+[start a discussion](https://github.com/nickytonline/so-solana/discussions)
 first.
 
 ## Getting Started (Local Development)
@@ -73,10 +73,10 @@ result.
 ## Getting Started (Gitpod)
 
 The project can be run in Gitpod. Navigate to
-https://gitpod.io/#https://github.com/nickytonline/hello-edge-and-node. If you
-wish to load it in Gitpod as an external contributor, you will need to fork the
-project first, then open the fork in Gitpod, e.g.
-https://gitpod.io/#https://github.com/some_user_that_forked_the_repository/hello-edge-and-node.
+https://gitpod.io/#https://github.com/nickytonline/so-solana. If you wish to
+load it in Gitpod as an external contributor, you will need to fork the project
+first, then open the fork in Gitpod, e.g.
+https://gitpod.io/#https://github.com/some_user_that_forked_the_repository/so-solana.
 
 1. Gitpod will take a minute or two to load.
 1. If this is the first time loading the project in Gitpod, it will take longer
