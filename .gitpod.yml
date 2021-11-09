@@ -3,38 +3,13 @@ ports:
     onOpen: open-preview
 
 tasks:
-  - init: |
-      brew install gh
-      nvm install $(cat .nvmrc)
-      nvm alias default $(cat .nvmrc)
-      npm install -g vercel
-      yarn install
-      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-      sh -c "$(curl -sSfL https://release.solana.com/v1.8.2/install)"
-      PATH="/home/gitpod/.local/share/solana/install/active_release/bin:$PATH"
-      echo 'PATH="/home/gitpod/.local/share/solana/install/active_release/bin:$PATH"' >> ~/.bashrc
-      solana config set --url localhost
-      rustc --version
-      rustup --version
-      cargo --version
-      solana-keygen new -s
-      solana address
-      solana config get
-      cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
-      anchor --version
-      solana config set --url devnet
-      solana airdrop 5
-      solana balance
-      solana address -k target/deploy/myepicproject-keypair.json
-
+  - init: ./bin/setup.sh
     command: yarn dev
 
 vscode:
   extensions:
-    - juanblanco.solidity
     - esbenp.prettier-vscode
     - dbaeumer.vscode-eslint
     - eamodio.gitlens
     - matklad.rust-analyzer
-    - waderyan.nodejs-extension-pack
     - donjayamanne.git-extension-pack

@@ -11,6 +11,33 @@ instructions. Thanks Buildspace!
 
 </center>
 
+## Prerequisites
+
+Unless you're running this project on Gitpod, the requirements to run this
+project are to have the Node.js version installed that corresponds to the
+version in `~/.nvmrc` in the root of this project. Using
+[nvm](https://github.com/nvm-sh/nvm) is recommended for installing Node.js.
+Refer to the
+[nvm installation instructions](https://github.com/nvm-sh/nvm#installing-and-updating)
+to get `nvm` set up.
+
+Once `nvm` is installed, you can set up the project. If you opt to not use
+`nvm`, ensure that the Node.js version specified in `~/.nvmrc` is installed.
+
+## Setup the project
+
+Run the `bin/setup.sh` script to install everything.
+
+There are known issues with the Windows installation using WSL (reminder that
+you need WSL installed) and with M1 Macs, so a friendly Google is your best
+friend. If you have figured out how to install it properly in those
+environments, please
+[create an issue](https://github.com/nickytonline/so-solana/issues/new?assignees=&labels=&template=bug_report.md&title=)
+and open a PR linked to that issue.
+
+Remember that you can use [Gitpod](#getting-started-gitpod) if you are having
+issues with those environments.
+
 ## Contributing
 
 If you are interested in contributing to the project, first read our
@@ -116,9 +143,34 @@ yarn build-storybook
 A fast blockchain for DeFi, NFTs, Web3 and more. Check out the
 [official Solana documentation](https://solana.com/developers).
 
+#### Generate a keypair
+
+Run the following commands to generate a keypair for Solana which will confirm
+the address and output the Solana configuration
+
+```
+solana-keygen new -s
+solana address
+solana config get
+```
+
+#### Airdrop yourself some SOL on the devnet
+
+If you're working on the devnet, it's handy to airdrop yourself some SOL. You
+can do the same thing for localhost if you need to.
+
+```
+solana config set --url devnet
+solana airdrop 5
+solana balance
+```
+
+For any questions in regards to the commands above, refer to the official Solana
+documentation.
+
 ### Anchor for Solana
 
-A runtime for Solana.
+A runtime for Solana
 
 to build and deploy a Solana program, run `bin/deploy-program.sh`. Under the
 hood it runs `anchor build`, `anchor deploy` and a few other things.
